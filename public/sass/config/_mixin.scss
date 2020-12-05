@@ -1,0 +1,26 @@
+@mixin mq($width: "phone") {
+    @if ($width == "phone") {
+        @media (max-width: 480px) {
+            @content;
+        }
+    } @else if ($width == "tablet") {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if ($width == "small-screen") {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if ($width == "large-screen") {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if ($width == "tablet") {
+        @media (min-width: 1201px) {
+            @content;
+        }
+    }
+}
